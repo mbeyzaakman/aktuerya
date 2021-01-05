@@ -1,0 +1,34 @@
+
+
+<p>
+  <strong>Ad:</strong>
+  <%= @kullanici.ad %>
+</p>
+
+<p>
+  <strong>Soyad:</strong>
+  <%= @kullanici.soyad %>
+</p>
+
+<p>
+  <strong>Emial:</strong>
+  <%= @kullanici.emial %>
+</p>
+
+<p>
+  <strong>Telefon numarası:</strong>
+  <%= @kullanici.telefon_numarası %>
+</p>
+
+<p>
+  <strong>Okudugunuz okul:</strong>
+  <%= @kullanici.okudugunuz_okul %>
+</p>
+
+<p>
+  <strong>Calıstıgınız is yerleri:</strong>
+  <%= @kullanici.calıstıgınız_is_yerleri %>
+</p>
+
+<%= link_to 'Edit', edit_kullanici_path(@kullanici), class:"btn btn-secondary" %> |
+<%= link_to 'Back', kullanicis_path, class:"btn btn-dark" %>

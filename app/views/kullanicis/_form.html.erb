@@ -1,0 +1,53 @@
+<%= form_with(model: kullanici) do |form| %>
+  <% if kullanici.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(kullanici.errors.count, "error") %> prohibited this kullanici from being saved:</h2>
+
+      <ul>
+        <% kullanici.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field mb-3">
+    <% form.label :ad %>
+    <%= form.text_field :ad, class:"form-control", placeholder:"Ad"  %>
+  </div>
+
+  <div class="field mb-3">
+    <% form.label :soyad %>
+    <%= form.text_field :soyad, class:"form-control", placeholder:"Soyad" %>
+  </div>
+
+  <div class="field mb-3">
+    <% form.label :emial %>
+    <%= form.text_field :emial, class:"form-control", placeholder:"Email" %>
+  </div>
+
+  <div class="field mb-3">
+    <% form.label :telefon_numarası %>
+    <%= form.number_field :telefon_numarası,class:"form-control", placeholder:"Telefon Numarası" %>
+  </div>
+
+  <div class="field mb-3">
+    <% form.label :okudugunuz_okul %>
+    <%= form.text_area :okudugunuz_okul,class:"form-control", placeholder:"Okudugunuz Okul" %>
+  </div>
+
+  <div class="field mb-3">
+    <% form.label :calıstıgınız_is_yerleri %>
+    <%= form.text_area :calıstıgınız_is_yerleri,class:"form-control", placeholder:"Calıstıgınız Is Yerleri" %>
+  </div>
+
+  <div class="field mb-3">
+  
+    <%= form.number_field :user_id, id: :kullanici_user_id, class:"form-control", value: current_user.id, type: :hidden %>
+  </div>
+
+</br>
+  <div class="actions">
+    <%= form.submit class:"btn btn-secondary" %>
+  </div>
+<% end %>

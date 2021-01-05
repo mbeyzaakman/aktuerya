@@ -1,0 +1,38 @@
+</br>
+<h4>Kayıtlı Üyeler</h4>
+</br>
+
+<table class="table table-striped table-bordered">
+  <thead class="table-info">
+    <tr>
+      <th>Ad</th>
+      <th>Soyad</th>
+      <th>Email</th>
+      <th>Telefon numarası</th>
+      <th>Okudugunuz okul</th>
+      <th>Calıstıgınız is yeri</th>
+     
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kullanicis.each do |kullanici| %>
+      <tr>
+        <td><%= kullanici.ad %></td>
+        <td><%= kullanici.soyad %></td>
+        <td><%= kullanici.emial %></td>
+        <td><%= kullanici.telefon_numarası %></td>
+        <td><%= kullanici.okudugunuz_okul %></td>
+        <td><%= kullanici.calıstıgınız_is_yerleri %></td>
+
+        <td><%= link_to 'Show', kullanici %></td>
+        <td><%= link_to 'Edit', edit_kullanici_path(kullanici) %></td>
+        <td><%= link_to 'Destroy', kullanici, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
